@@ -1,0 +1,45 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2012-11-03T13:11:04+08:00
+Notes: 4
+Binaries: 0
+Archives: 0
+Standards: 4
+
+Apache Licensed: 4
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  N     DISCLAIMER
+  AL    pom.xml
+  N     LICENSE
+  N     README
+  N     NOTICE
+  AL    src/main/config/crunch-formatting-styles.xml
+  AL    src/main/config/checkstyle.xml
+  AL    src/site/site.xml
+ 
+ *****************************************************
+ Printing headers for files without AL header...
+ 
+ 

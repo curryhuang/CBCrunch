@@ -1,0 +1,44 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2012-11-03T13:11:06+08:00
+Notes: 0
+Binaries: 0
+Archives: 0
+Standards: 7
+
+Apache Licensed: 7
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    /home/curry/Project/incubator-crunch/crunch-test/pom.xml
+  AL    /home/curry/Project/incubator-crunch/crunch-test/src/main/java/org/apache/crunch/test/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch-test/src/main/java/org/apache/crunch/test/TemporaryPath.java
+  AL    /home/curry/Project/incubator-crunch/crunch-test/src/main/java/org/apache/crunch/test/CrunchTestSupport.java
+  AL    /home/curry/Project/incubator-crunch/crunch-test/src/main/java/org/apache/crunch/test/TestCounters.java
+  AL    /home/curry/Project/incubator-crunch/crunch-test/src/test/java/org/apache/crunch/test/CrunchTestSupportTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch-test/src/it/java/org/apache/crunch/test/TemporaryPathIT.java
+ 
+ *****************************************************
+ Printing headers for files without AL header...
+ 
+ 

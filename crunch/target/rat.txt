@@ -1,0 +1,268 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2012-11-03T13:11:10+08:00
+Notes: 0
+Binaries: 0
+Archives: 0
+Standards: 231
+
+Apache Licensed: 231
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    /home/curry/Project/incubator-crunch/crunch/pom.xml
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/PTable.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/PObject.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/CrunchCombiner.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/CrunchMapper.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/CrunchReducer.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/CrunchRuntimeException.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/CrunchTaskContext.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/CrunchInputSplit.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/CrunchInputs.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/CrunchInputFormat.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/RTNode.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/RuntimeParameters.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/CrunchRecordReader.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/TaskAttemptContextFactory.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/run/NodeContext.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/collect/InputTable.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/collect/InputCollection.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/collect/DoTableImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/collect/UnionCollection.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/collect/PGroupedTableImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/collect/DoCollectionImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/collect/PCollectionImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/collect/PTableBase.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/collect/UnionTable.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/emit/OutputEmitter.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/emit/IntermediateEmitter.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/emit/MultipleOutputEmitter.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/exec/CrunchJob.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/exec/MRExecutor.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/MRPipeline.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/plan/MSCRPlanner.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/plan/PlanningParameters.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/plan/NodePath.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/plan/Graph.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/plan/MSCROutputHandler.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/plan/DoNode.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/plan/GraphBuilder.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/plan/JobNameBuilder.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/plan/Edge.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/plan/Vertex.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mr/plan/JobPrototype.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mem/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mem/collect/MemCollection.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mem/collect/MemGroupedTable.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mem/collect/MemTable.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mem/MemPipeline.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/impl/mem/emit/InMemoryEmitter.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/hadoop/mapreduce/lib/jobcontrol/CrunchJobControl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/hadoop/mapreduce/lib/jobcontrol/CrunchControlledJob.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/hadoop/mapreduce/lib/output/CrunchMultipleOutputs.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/PipelineResult.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/Pair.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/Tuple4.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/fn/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/fn/PairMapFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/fn/CompositeMapFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/fn/IdentityFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/fn/MapKeysFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/fn/MapValuesFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/fn/ExtractKeyFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/Tuple.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/PCollection.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/materialize/MaterializableIterable.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/materialize/pobject/PObjectImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/materialize/pobject/MapPObject.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/materialize/pobject/FirstElementPObject.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/materialize/pobject/CollectionPObject.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/materialize/MaterializableMap.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/util/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/util/Tuples.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/util/CrunchTool.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/util/DistCache.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/TupleN.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/Pipeline.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/Cartesian.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/Cogroup.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/Sample.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/Set.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/Join.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/join/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/join/InnerJoinFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/join/RightOuterJoinFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/join/MapsideJoin.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/join/JoinUtils.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/join/JoinFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/join/LeftOuterJoinFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/join/FullOuterJoinFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/Aggregate.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/Sort.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/SecondarySort.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/lib/PTables.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/MapFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/PGroupedTable.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/TableSource.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/PTypeUtils.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/PTableType.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/PGroupedTableType.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/Protos.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/PType.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/MapDeepCopier.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/WritableGroupedTableType.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/GenericArrayWritable.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/WritablePairConverter.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/WritableType.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/WritableTypeFamily.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/Writables.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/WritableTableType.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/TextMapWritable.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/WritableDeepCopier.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/WritableValueConverter.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/writable/TupleWritable.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/PTypeFamily.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroPairConverter.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroTextOutputFormat.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/ReflectDataFactory.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/Avros.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroInputFormat.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroDeepCopier.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroOutputFormat.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroTableType.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroUtf8InputFormat.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/SafeAvroSerialization.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroTypeFamily.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroType.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroRecordReader.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroCapabilities.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroKeyConverter.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/avro/AvroGroupedTableType.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/DeepCopier.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/TupleDeepCopier.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/PTypes.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/TupleFactory.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/Converter.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/types/CollectionDeepCopier.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/Source.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/Target.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/DoFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/Tuple3.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/package-info.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/OutputHandler.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/impl/TableSourcePathTargetImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/impl/AutoClosingIterator.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/impl/SourceTargetImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/impl/TableSourceTargetImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/impl/ReadableSourcePathTargetImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/impl/FileTargetImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/impl/SourcePathTargetImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/impl/InputBundle.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/impl/FileSourceImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/impl/FileTableSourceImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/impl/ReadableSourceTargetImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/FileReaderFactory.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/ReadableSource.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/MapReduceTarget.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/To.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/avro/AvroFileTarget.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/avro/AvroFileSource.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/avro/AvroFileSourceTarget.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/avro/AvroFileReaderFactory.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/seq/SeqFileTableReaderFactory.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/seq/SeqFileHelper.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/seq/SeqFileTarget.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/seq/SeqFileTableSourceTarget.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/seq/SeqFileTableSource.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/seq/SeqFileSource.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/seq/SeqFileSourceTarget.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/seq/SeqFileReaderFactory.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/From.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/At.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/PathTargetImpl.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/SourceTargetHelper.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/CompositePathIterable.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/ReadableSourceTarget.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/SequentialFileNamingScheme.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/PathTarget.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/FileNamingScheme.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/text/TextFileSource.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/text/TextFileSourceTarget.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/text/TextFileReaderFactory.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/text/TextFileTarget.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/text/BZip2TextInputFormat.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/io/text/CBZip2InputStream.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/SourceTarget.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/CombineFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/Emitter.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/GroupingOptions.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/java/org/apache/crunch/FilterFn.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/main/resources/log4j.properties
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/impl/mr/collect/DoTableImplTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/impl/mr/collect/DoCollectionImplTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/impl/mr/exec/CrunchJobTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/impl/mr/MRPipelineTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/impl/mr/plan/JobNameBuilderTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/fn/ExtractKeyFnTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/fn/StoreLastEmitter.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/fn/PairMapTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/fn/MapValuesTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/fn/MapKeysTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/util/DistCacheTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/lib/TupleWritablePartitionerTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/lib/AvroIndexedRecordPartitionerTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/lib/SampleTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/lib/CartesianTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/types/writable/WritableGroupedTableTypeTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/types/writable/WritableTypeTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/types/writable/WritablesTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/types/writable/WritableDeepCopierTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/types/writable/WritableTableTypeTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/PairTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/FilterFnTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/TupleTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/CombineFnTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/io/SequentialFileNamingSchemeTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/java/org/apache/crunch/io/SourceTargetHelperTest.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/avro/employee.avsc
+  AL    /home/curry/Project/incubator-crunch/crunch/src/test/avro/person.avsc
+  AL    /home/curry/Project/incubator-crunch/crunch/src/it/java/org/apache/crunch/EnumPairIT.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/it/java/org/apache/crunch/impl/mem/MemPipelineFileWritingIT.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/it/java/org/apache/crunch/test/TemporaryPaths.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/it/java/org/apache/crunch/lib/SecondarySortIT.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/it/java/org/apache/crunch/PageRankIT.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/it/java/org/apache/crunch/io/CompositePathIterableIT.java
+  AL    /home/curry/Project/incubator-crunch/crunch/src/it/resources/log4j.properties
+  AL    /home/curry/Project/incubator-crunch/crunch/src/site/site.xml
+ 
+ *****************************************************
+ Printing headers for files without AL header...
+ 
+ 

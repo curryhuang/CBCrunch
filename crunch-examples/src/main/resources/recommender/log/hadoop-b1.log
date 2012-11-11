@@ -1,0 +1,288 @@
+0    [main] WARN  org.apache.hadoop.util.NativeCodeLoader  - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+56   [main] INFO  org.apache.crunch.impl.mr.collect.PGroupedTableImpl  - Setting num reduce tasks to 1
+74   [main] INFO  org.apache.crunch.impl.mr.collect.PGroupedTableImpl  - Setting num reduce tasks to 1
+192  [Thread-1] WARN  org.apache.hadoop.mapred.JobClient  - No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+208  [Thread-1] INFO  org.apache.hadoop.mapreduce.lib.input.FileInputFormat  - Total input paths to process : 1
+216  [Thread-1] WARN  org.apache.hadoop.io.compress.snappy.LoadSnappy  - Snappy native library not loaded
+383  [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Creating REDUCE in /tmp/hadoop-curry/mapred/local/archive/-4325099910201443425_1657816484_1106389037/file/tmp/crunch-1910473770/p2-work--8392245745045409415 with rwxr-xr-x
+387  [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Cached /tmp/crunch-1910473770/p2/REDUCE as /tmp/hadoop-curry/mapred/local/archive/-4325099910201443425_1657816484_1106389037/file/tmp/crunch-1910473770/p2/REDUCE
+395  [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Cached /tmp/crunch-1910473770/p2/REDUCE as /tmp/hadoop-curry/mapred/local/archive/-4325099910201443425_1657816484_1106389037/file/tmp/crunch-1910473770/p2/REDUCE
+397  [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Creating MAP in /tmp/hadoop-curry/mapred/local/archive/6211307421296316846_-2069076546_1106389037/file/tmp/crunch-1910473770/p2-work-6004679670481013380 with rwxr-xr-x
+407  [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Cached /tmp/crunch-1910473770/p2/MAP as /tmp/hadoop-curry/mapred/local/archive/6211307421296316846_-2069076546_1106389037/file/tmp/crunch-1910473770/p2/MAP
+407  [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Cached /tmp/crunch-1910473770/p2/MAP as /tmp/hadoop-curry/mapred/local/archive/6211307421296316846_-2069076546_1106389037/file/tmp/crunch-1910473770/p2/MAP
+463  [Thread-1] INFO  org.apache.crunch.impl.mr.exec.CrunchJob  - Running job "org.apache.crunch.examples.Recommender: Text(src/main/resources/recommender/input)+S0+GBK+S1+SeqFile(/tmp/crunch-1910473770/p1)"
+463  [Thread-1] INFO  org.apache.crunch.impl.mr.exec.CrunchJob  - Job status available at: http://localhost:8080/
+513  [Thread-12] INFO  org.apache.hadoop.util.ProcessTree  - setsid exited with exit code 0
+531  [Thread-12] INFO  org.apache.hadoop.mapred.Task  -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@78213dbd
+548  [Thread-12] INFO  org.apache.hadoop.mapred.MapTask  - io.sort.mb = 100
+584  [Thread-12] INFO  org.apache.hadoop.mapred.MapTask  - data buffer = 79691776/99614720
+584  [Thread-12] INFO  org.apache.hadoop.mapred.MapTask  - record buffer = 262144/327680
+1173 [Thread-12] INFO  org.apache.hadoop.mapred.MapTask  - Starting flush of map output
+1345 [Thread-12] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 0
+1346 [Thread-12] INFO  org.apache.hadoop.mapred.Task  - Task:attempt_local_0001_m_000000_0 is done. And is in the process of commiting
+3498 [Thread-12] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+3498 [Thread-12] INFO  org.apache.hadoop.mapred.Task  - Task 'attempt_local_0001_m_000000_0' done.
+3505 [Thread-12] INFO  org.apache.hadoop.mapred.Task  -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@5d8c1b8
+3505 [Thread-12] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+3509 [Thread-12] INFO  org.apache.hadoop.mapred.Merger  - Merging 1 sorted segments
+3514 [Thread-12] INFO  org.apache.hadoop.mapred.Merger  - Down to the last merge-pass, with 1 segments left of total size: 1440002 bytes
+3514 [Thread-12] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+3886 [Thread-12] INFO  org.apache.hadoop.mapred.Task  - Task:attempt_local_0001_r_000000_0 is done. And is in the process of commiting
+3887 [Thread-12] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+3887 [Thread-12] INFO  org.apache.hadoop.mapred.Task  - Task attempt_local_0001_r_000000_0 is allowed to commit now
+3889 [Thread-12] INFO  org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter  - Saved output of task 'attempt_local_0001_r_000000_0' to /tmp/crunch-1910473770/p2/output
+6505 [Thread-12] INFO  org.apache.hadoop.mapred.LocalJobRunner  - reduce > reduce
+6507 [Thread-12] INFO  org.apache.hadoop.mapred.Task  - Task 'attempt_local_0001_r_000000_0' done.
+7031 [Thread-1] WARN  org.apache.hadoop.mapred.JobClient  - No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+7045 [Thread-1] INFO  org.apache.hadoop.mapreduce.lib.input.FileInputFormat  - Total input paths to process : 1
+7069 [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Creating REDUCE in /tmp/hadoop-curry/mapred/local/archive/-2056747425620111470_-894340477_1106389037/file/tmp/crunch-1910473770/p3-work-4985848916607224069 with rwxr-xr-x
+7071 [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Cached /tmp/crunch-1910473770/p3/REDUCE as /tmp/hadoop-curry/mapred/local/archive/-2056747425620111470_-894340477_1106389037/file/tmp/crunch-1910473770/p3/REDUCE
+7072 [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Cached /tmp/crunch-1910473770/p3/REDUCE as /tmp/hadoop-curry/mapred/local/archive/-2056747425620111470_-894340477_1106389037/file/tmp/crunch-1910473770/p3/REDUCE
+7075 [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Creating MAP in /tmp/hadoop-curry/mapred/local/archive/2170226354032210718_-2068153025_1106389037/file/tmp/crunch-1910473770/p3-work--6667125094915849695 with rwxr-xr-x
+7078 [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Cached /tmp/crunch-1910473770/p3/MAP as /tmp/hadoop-curry/mapred/local/archive/2170226354032210718_-2068153025_1106389037/file/tmp/crunch-1910473770/p3/MAP
+7078 [Thread-1] INFO  org.apache.hadoop.filecache.TrackerDistributedCacheManager  - Cached /tmp/crunch-1910473770/p3/MAP as /tmp/hadoop-curry/mapred/local/archive/2170226354032210718_-2068153025_1106389037/file/tmp/crunch-1910473770/p3/MAP
+7112 [Thread-1] INFO  org.apache.crunch.impl.mr.exec.CrunchJob  - Running job "org.apache.crunch.examples.Recommender: SeqFile(/tmp/crunch-1910473770/p1)+S2+GBK+S3+asText+Text(src/main/resources/recommender/output)"
+7112 [Thread-1] INFO  org.apache.crunch.impl.mr.exec.CrunchJob  - Job status available at: http://localhost:8080/
+7122 [Thread-28] INFO  org.apache.hadoop.mapred.Task  -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@7ec6a013
+7127 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - io.sort.mb = 100
+7166 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - data buffer = 79691776/99614720
+7166 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - record buffer = 262144/327680
+7361 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+7361 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 0; bufend = 2097152; bufvoid = 99614720
+7362 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 0; kvend = 262144; length = 327680
+7609 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 0
+7713 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+7713 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 2097152; bufend = 4194296; bufvoid = 99614720
+7713 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 262144; kvend = 196607; length = 327680
+7944 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 1
+8049 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+8049 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 4194296; bufend = 6291440; bufvoid = 99614720
+8049 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 196607; kvend = 131070; length = 327680
+8270 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 2
+8383 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+8383 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 6291440; bufend = 8388584; bufvoid = 99614720
+8383 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 131070; kvend = 65533; length = 327680
+8612 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 3
+8713 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+8713 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 8388584; bufend = 10485736; bufvoid = 99614720
+8713 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 65533; kvend = 327677; length = 327680
+8948 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 4
+9041 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+9041 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 10485736; bufend = 12582880; bufvoid = 99614720
+9041 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 327677; kvend = 262140; length = 327680
+9268 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 5
+9364 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+9364 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 12582880; bufend = 14680024; bufvoid = 99614720
+9364 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 262140; kvend = 196603; length = 327680
+9581 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 6
+9674 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+9674 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 14680024; bufend = 16777168; bufvoid = 99614720
+9674 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 196603; kvend = 131066; length = 327680
+9896 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 7
+9989 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+9989 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 16777168; bufend = 18874312; bufvoid = 99614720
+9989 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 131066; kvend = 65529; length = 327680
+10216 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 8
+10325 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+10325 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 18874312; bufend = 20971464; bufvoid = 99614720
+10325 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 65529; kvend = 327673; length = 327680
+10543 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 9
+10636 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+10636 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 20971464; bufend = 23068608; bufvoid = 99614720
+10636 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 327673; kvend = 262136; length = 327680
+10854 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 10
+10949 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+10949 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 23068608; bufend = 25165752; bufvoid = 99614720
+10949 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 262136; kvend = 196599; length = 327680
+11167 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 11
+11259 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+11259 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 25165752; bufend = 27262896; bufvoid = 99614720
+11259 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 196599; kvend = 131062; length = 327680
+11450 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 12
+11546 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+11546 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 27262896; bufend = 29360040; bufvoid = 99614720
+11546 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 131062; kvend = 65525; length = 327680
+11753 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 13
+11859 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+11859 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 29360040; bufend = 31457192; bufvoid = 99614720
+11859 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 65525; kvend = 327669; length = 327680
+12083 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 14
+12194 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+12194 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 31457192; bufend = 33554336; bufvoid = 99614720
+12194 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 327669; kvend = 262132; length = 327680
+12431 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 15
+12539 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+12539 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 33554336; bufend = 35651480; bufvoid = 99614720
+12539 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 262132; kvend = 196595; length = 327680
+12767 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 16
+12878 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+12878 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 35651480; bufend = 37748624; bufvoid = 99614720
+12878 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 196595; kvend = 131058; length = 327680
+13112 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 17
+13121 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+13219 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+13219 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 37748624; bufend = 39845768; bufvoid = 99614720
+13220 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 131058; kvend = 65521; length = 327680
+13443 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 18
+13546 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+13546 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 39845768; bufend = 41942920; bufvoid = 99614720
+13546 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 65521; kvend = 327665; length = 327680
+13768 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 19
+13867 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+13867 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 41942920; bufend = 44040064; bufvoid = 99614720
+13867 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 327665; kvend = 262128; length = 327680
+14081 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 20
+14182 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+14182 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 44040064; bufend = 46137208; bufvoid = 99614720
+14182 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 262128; kvend = 196591; length = 327680
+14405 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 21
+14505 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+14505 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 46137208; bufend = 48234352; bufvoid = 99614720
+14505 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 196591; kvend = 131054; length = 327680
+14729 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 22
+14828 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+14828 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 48234352; bufend = 50331496; bufvoid = 99614720
+14828 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 131054; kvend = 65517; length = 327680
+15047 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 23
+15154 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+15154 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 50331496; bufend = 52428648; bufvoid = 99614720
+15154 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 65517; kvend = 327661; length = 327680
+15399 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 24
+15501 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+15501 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 52428648; bufend = 54525792; bufvoid = 99614720
+15502 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 327661; kvend = 262124; length = 327680
+15722 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 25
+15832 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+15832 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 54525792; bufend = 56622936; bufvoid = 99614720
+15832 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 262124; kvend = 196587; length = 327680
+16058 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 26
+16123 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+16163 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+16163 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 56622936; bufend = 58720080; bufvoid = 99614720
+16163 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 196587; kvend = 131050; length = 327680
+16385 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 27
+16484 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+16484 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 58720080; bufend = 60817224; bufvoid = 99614720
+16484 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 131050; kvend = 65513; length = 327680
+16708 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 28
+16811 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+16811 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 60817224; bufend = 62914376; bufvoid = 99614720
+16811 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 65513; kvend = 327657; length = 327680
+17049 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 29
+17156 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+17156 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 62914376; bufend = 65011520; bufvoid = 99614720
+17156 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 327657; kvend = 262120; length = 327680
+17378 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 30
+17480 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+17480 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 65011520; bufend = 67108664; bufvoid = 99614720
+17480 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 262120; kvend = 196583; length = 327680
+17720 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 31
+17819 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+17819 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 67108664; bufend = 69205808; bufvoid = 99614720
+17819 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 196583; kvend = 131046; length = 327680
+18016 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 32
+18120 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+18120 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 69205808; bufend = 71302952; bufvoid = 99614720
+18120 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 131046; kvend = 65509; length = 327680
+18333 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 33
+18449 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+18449 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 71302952; bufend = 73400104; bufvoid = 99614720
+18449 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 65509; kvend = 327653; length = 327680
+18670 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 34
+18774 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+18774 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 73400104; bufend = 75497248; bufvoid = 99614720
+18774 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 327653; kvend = 262116; length = 327680
+18990 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 35
+19101 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+19101 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 75497248; bufend = 77594392; bufvoid = 99614720
+19101 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 262116; kvend = 196579; length = 327680
+19124 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+19313 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 36
+19425 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+19425 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 77594392; bufend = 79691536; bufvoid = 99614720
+19426 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 196579; kvend = 131042; length = 327680
+19645 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 37
+19750 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+19750 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 79691536; bufend = 81788680; bufvoid = 99614720
+19750 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 131042; kvend = 65505; length = 327680
+19973 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 38
+20084 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+20084 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 81788680; bufend = 83885832; bufvoid = 99614720
+20084 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 65505; kvend = 327649; length = 327680
+20302 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 39
+20411 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+20411 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 83885832; bufend = 85982976; bufvoid = 99614720
+20411 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 327649; kvend = 262112; length = 327680
+20639 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 40
+20750 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+20750 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 85982976; bufend = 88080120; bufvoid = 99614720
+20750 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 262112; kvend = 196575; length = 327680
+21036 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 41
+21171 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+21171 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 88080120; bufend = 90177264; bufvoid = 99614720
+21171 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 196575; kvend = 131038; length = 327680
+21400 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 42
+21514 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+21514 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 90177264; bufend = 92274408; bufvoid = 99614720
+21514 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 131038; kvend = 65501; length = 327680
+21762 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 43
+21857 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+21857 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 92274408; bufend = 94371560; bufvoid = 99614720
+21857 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 65501; kvend = 327645; length = 327680
+22077 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 44
+22124 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+22176 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+22176 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 94371560; bufend = 96468704; bufvoid = 99614720
+22176 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 327645; kvend = 262108; length = 327680
+22402 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 45
+22497 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+22497 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 96468704; bufend = 98565848; bufvoid = 99614720
+22497 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 262108; kvend = 196571; length = 327680
+22713 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 46
+22808 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+22808 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 98565848; bufend = 1048272; bufvoid = 99614720
+22808 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 196571; kvend = 131034; length = 327680
+23027 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 47
+23136 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+23136 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 1048272; bufend = 3145416; bufvoid = 99614720
+23136 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 131034; kvend = 65497; length = 327680
+23377 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 48
+23479 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+23479 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 3145416; bufend = 5242568; bufvoid = 99614720
+23479 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 65497; kvend = 327641; length = 327680
+23711 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 49
+23819 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Spilling map output: record full = true
+23819 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - bufstart = 5242568; bufend = 7339712; bufvoid = 99614720
+23819 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - kvstart = 327641; kvend = 262104; length = 327680
+23848 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Starting flush of map output
+24028 [SpillThread] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 50
+24065 [Thread-28] INFO  org.apache.hadoop.mapred.MapTask  - Finished spill 51
+24071 [Thread-28] INFO  org.apache.hadoop.mapred.Merger  - Merging 52 sorted segments
+24072 [Thread-28] INFO  org.apache.hadoop.mapred.Merger  - Merging 7 intermediate segments out of a total of 52
+25083 [Thread-28] INFO  org.apache.hadoop.mapred.Merger  - Merging 10 intermediate segments out of a total of 46
+25125 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+26399 [Thread-28] INFO  org.apache.hadoop.mapred.Merger  - Merging 10 intermediate segments out of a total of 37
+27799 [Thread-28] INFO  org.apache.hadoop.mapred.Merger  - Merging 10 intermediate segments out of a total of 28
+28125 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+29193 [Thread-28] INFO  org.apache.hadoop.mapred.Merger  - Merging 10 intermediate segments out of a total of 19
+30577 [Thread-28] INFO  org.apache.hadoop.mapred.Merger  - Down to the last merge-pass, with 10 segments left of total size: 134030040 bytes
+31126 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+34126 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+37127 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+40128 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+42353 [Thread-28] INFO  org.apache.hadoop.mapred.Task  - Task:attempt_local_0002_m_000000_0 is done. And is in the process of commiting
+43128 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+43131 [Thread-28] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+43132 [Thread-28] INFO  org.apache.hadoop.mapred.Task  - Task 'attempt_local_0002_m_000000_0' done.
+43140 [Thread-28] INFO  org.apache.hadoop.mapred.Task  -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@25930632
+43141 [Thread-28] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+43141 [Thread-28] INFO  org.apache.hadoop.mapred.Merger  - Merging 1 sorted segments
+43142 [Thread-28] INFO  org.apache.hadoop.mapred.Merger  - Down to the last merge-pass, with 1 segments left of total size: 134030022 bytes
+43142 [Thread-28] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+46565 [Thread-28] INFO  org.apache.hadoop.mapred.Task  - Task:attempt_local_0002_r_000000_0 is done. And is in the process of commiting
+46565 [Thread-28] INFO  org.apache.hadoop.mapred.LocalJobRunner  - 
+46565 [Thread-28] INFO  org.apache.hadoop.mapred.Task  - Task attempt_local_0002_r_000000_0 is allowed to commit now
+46567 [Thread-28] INFO  org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter  - Saved output of task 'attempt_local_0002_r_000000_0' to /tmp/crunch-1910473770/p3/output
+49140 [communication thread] INFO  org.apache.hadoop.mapred.LocalJobRunner  - reduce > reduce
+49144 [Thread-28] INFO  org.apache.hadoop.mapred.LocalJobRunner  - reduce > reduce
+49149 [Thread-28] INFO  org.apache.hadoop.mapred.Task  - Task 'attempt_local_0002_r_000000_0' done.
