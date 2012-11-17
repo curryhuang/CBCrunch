@@ -38,96 +38,104 @@ import com.google.common.collect.ImmutableList;
 
 public class PGroupedTableImpl<K, V> extends PCollectionImpl<Pair<K, Iterable<V>>> implements PGroupedTable<K, V> {
 
-  private static final Log LOG = LogFactory.getLog(PGroupedTableImpl.class);
+	private static final Log LOG = LogFactory.getLog(PGroupedTableImpl.class);
 
-  private final PTableBase<K, V> parent;
-  private final GroupingOptions groupingOptions;
-  private final PGroupedTableType<K, V> ptype;
-  
-  PGroupedTableImpl(PTableBase<K, V> parent) {
-    this(parent, null);
-  }
+	private final PTableBase<K, V> parent;
+	private final GroupingOptions groupingOptions;
+	private final PGroupedTableType<K, V> ptype;
 
-  PGroupedTableImpl(PTableBase<K, V> parent, GroupingOptions groupingOptions) {
-    super("GBK");
-    this.parent = parent;
-    this.groupingOptions = groupingOptions;
-    this.ptype = parent.getPTableType().getGroupedTableType();
-  }
+	PGroupedTableImpl(PTableBase<K, V> parent) {
+		this(parent, null);
+	}
 
-  public void configureShuffle(Job job) {
-    ptype.configureShuffle(job, groupingOptions);
-    if (groupingOptions == null || groupingOptions.getNumReducers() <= 0) {
-      /*long bytesPerTask = job.getConfiguration().getLong("crunch.bytes.per.reduce.task", (1000L * 1000L * 1000L));
-      int numReduceTasks = 1 + (int) (getSize() / bytesPerTask);*/
-      //To prevent too many reduce tasks when the estimated size is too large 
-      int numReduceSlots = job.getConfiguration().getInt("mapred.tasktracker.reduce.tasks.maximum", 1) *
-    		  job.getConfiguration().getInt(ClusterOracle.CLUSTER_SIZE, 1);
-      int numReduceTasks = (int) (numReduceSlots * 0.75);
-      if (numReduceTasks > 0) {
-        job.setNumReduceTasks(numReduceTasks);
-        LOG.info(String.format("Setting num reduce tasks to %d", numReduceTasks));
-      } else {
-        LOG.warn("Attempted to set a negative number of reduce tasks");
-      }
-    }
-  }
+	PGroupedTableImpl(PTableBase<K, V> parent, GroupingOptions groupingOptions) {
+		super("GBK");
+		this.parent = parent;
+		this.groupingOptions = groupingOptions;
+		this.ptype = parent.getPTableType().getGroupedTableType();
+	}
 
-  @Override
-  protected long getSizeInternal() {
-    return parent.getSizeInternal();
-  }
-  
-  @Override
-  protected long getSizeByRecordInternal(){
-	  return parent.getSizeByRecordInternal();
-  }
+	public void configureShuffle(Job job) {
+		ptype.configureShuffle(job, groupingOptions);
+		if (groupingOptions == null || groupingOptions.getNumReducers() <= 0) {
+			boolean opt = job.getConfiguration().getBoolean("opt.reduce", false);
+			int numReduceTasks = 1;
+			if (!opt) {
+				long bytesPerTask = job.getConfiguration().getLong("crunch.bytes.per.reduce.task",
+						(1000L * 1000L * 1000L));
+				numReduceTasks = 1 + (int) (getSize() / bytesPerTask);
+			} else {
+				// To prevent too many reduce tasks when the estimated size is
+				// too large
+				int numReduceSlots = job.getConfiguration().getInt("mapred.tasktracker.reduce.tasks.maximum", 1)
+						* job.getConfiguration().getInt(ClusterOracle.CLUSTER_SIZE, 1);
+				numReduceTasks = (int) (numReduceSlots * 0.75);
+			}
+			if (numReduceTasks > 0) {
+				job.setNumReduceTasks(numReduceTasks);
+				LOG.info(String.format("Setting num reduce tasks to %d", numReduceTasks));
+			} else {
+				LOG.warn("Attempted to set a negative number of reduce tasks");
+			}
+		}
+	}
 
-  @Override
-  public PType<Pair<K, Iterable<V>>> getPType() {
-    return ptype;
-  }
+	@Override
+	protected long getSizeInternal() {
+		return parent.getSizeInternal();
+	}
 
-  public PTable<K, V> combineValues(CombineFn<K, V> combineFn) {
-    return new DoTableImpl<K, V>("combine", getChainingCollection(), combineFn, parent.getPTableType());
-  }
+	@Override
+	protected long getSizeByRecordInternal() {
+		return parent.getSizeByRecordInternal();
+	}
 
-  private static class Ungroup<K, V> extends DoFn<Pair<K, Iterable<V>>, Pair<K, V>> {
-    @Override
-    public void process(Pair<K, Iterable<V>> input, Emitter<Pair<K, V>> emitter) {
-      for (V v : input.second()) {
-        emitter.emit(Pair.of(input.first(), v));
-      }
-    }
-  }
+	@Override
+	public PType<Pair<K, Iterable<V>>> getPType() {
+		return ptype;
+	}
 
-  public PTable<K, V> ungroup() {
-    return parallelDo("ungroup", new Ungroup<K, V>(), parent.getPTableType());
-  }
+	public PTable<K, V> combineValues(CombineFn<K, V> combineFn) {
+		return new DoTableImpl<K, V>("combine", getChainingCollection(), combineFn, parent.getPTableType());
+	}
 
-  @Override
-  protected void acceptInternal(PCollectionImpl.Visitor visitor) {
-    visitor.visitGroupedTable(this);
-  }
+	private static class Ungroup<K, V> extends DoFn<Pair<K, Iterable<V>>, Pair<K, V>> {
+		@Override
+		public void process(Pair<K, Iterable<V>> input, Emitter<Pair<K, V>> emitter) {
+			for (V v : input.second()) {
+				emitter.emit(Pair.of(input.first(), v));
+			}
+		}
+	}
 
-  @Override
-  public List<PCollectionImpl<?>> getParents() {
-    return ImmutableList.<PCollectionImpl<?>> of(parent);
-  }
+	public PTable<K, V> ungroup() {
+		return parallelDo("ungroup", new Ungroup<K, V>(), parent.getPTableType());
+	}
 
-  @Override
-  public DoNode createDoNode() {
-    return DoNode.createFnNode(getName(), ptype.getInputMapFn(), ptype);
-  }
+	@Override
+	protected void acceptInternal(PCollectionImpl.Visitor visitor) {
+		visitor.visitGroupedTable(this);
+	}
 
-  public DoNode getGroupingNode() {
-    return DoNode.createGroupingNode("", ptype);
-  }
-  
-  @Override
-  protected PCollectionImpl<Pair<K, Iterable<V>>> getChainingCollection() {
-    // Use a copy for chaining to allow sending the output of a single grouped table to multiple outputs
-    // TODO This should be implemented in a cleaner way in the planner
-    return new PGroupedTableImpl<K, V>(parent, groupingOptions);
-  }
+	@Override
+	public List<PCollectionImpl<?>> getParents() {
+		return ImmutableList.<PCollectionImpl<?>> of(parent);
+	}
+
+	@Override
+	public DoNode createDoNode() {
+		return DoNode.createFnNode(getName(), ptype.getInputMapFn(), ptype);
+	}
+
+	public DoNode getGroupingNode() {
+		return DoNode.createGroupingNode("", ptype);
+	}
+
+	@Override
+	protected PCollectionImpl<Pair<K, Iterable<V>>> getChainingCollection() {
+		// Use a copy for chaining to allow sending the output of a single
+		// grouped table to multiple outputs
+		// TODO This should be implemented in a cleaner way in the planner
+		return new PGroupedTableImpl<K, V>(parent, groupingOptions);
+	}
 }

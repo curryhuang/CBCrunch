@@ -2,24 +2,25 @@ package org.apache.crunch.impl.mr.plan;
 
 public class MapCostCalculator implements CostCalculator {
 	
+	private long MB = MapReduceOracle.MB;
+	
 	private long splitSize;
 	private long inputPairWidth;
 	private float mapSizeSel;
 	private float mapRecsSel;
+	private float combineSizeSel;
 	private long numSpills;
-	private long spillFileRecs;
 	private long spillFileSize;
 	private MapReduceOracle oracle;
 	
 	public MapCostCalculator(long splitSize,
 							 long inputPairWidth,
-							 float mapSizeSel,
-							 float mapRecsSel, 
 							 MapReduceOracle oracle){
 		this.splitSize = splitSize;
 		this.inputPairWidth = inputPairWidth;
-		this.mapSizeSel = mapSizeSel;
-		this.mapRecsSel = mapRecsSel;
+		this.mapSizeSel = oracle.getMapSizeSel();
+		this.mapRecsSel = oracle.getMapRecsSel();
+		this.combineSizeSel = oracle.getCombineSizeSel();
 		this.oracle = oracle;
 	}
 	
@@ -36,7 +37,6 @@ public class MapCostCalculator implements CostCalculator {
 		long mapOutRecs = (long) (mapInRecs * mapRecsSel);
 		long mapOutRecWidth = mapOutBytes / mapOutRecs;
 		
-		long MB = MapReduceOracle.MB;
 		long pSortMB = oracle.getpSortMB();
 		float pSortRecPerc = oracle.getpSortRecPerc();
 		float pSpillPerc = oracle.getpSpillPerc();
@@ -47,10 +47,9 @@ public class MapCostCalculator implements CostCalculator {
 		long spillBufferSize = spillBufferRecs * mapOutRecWidth;
 		long numSpills = (long) Math.ceil(mapOutRecs / spillBufferRecs);
 		this.numSpills = numSpills;
-		this.spillFileSize = spillBufferSize;
-		this.spillFileRecs = spillBufferRecs;
+		this.spillFileSize = (long) (spillBufferSize * combineSizeSel);
 		
-		return numSpills * spillBufferRecs;
+		return numSpills * spillFileSize;
 	}
 	
 	private long calcMergeCost(){
@@ -61,15 +60,16 @@ public class MapCostCalculator implements CostCalculator {
 		}
 		else if(numSpills <= pSortFactor){
 			//read all the records in spills and write them to one file
-			return 2 * spillFileRecs * numSpills;
+			return 2 * spillFileSize * numSpills;
 		}
 		else {
 			long numSpillsFirstPass = calcNumSpillsFirstPass(numSpills, pSortFactor);
-			long numSpillsIntermMerge = calcNumSpillsIntermMerge(numSpills, pSortFactor);
-			long numSpillsFinalMerge = calcNumSpillsFinalMerge(numSpills, pSortFactor);
 			long numMergePasses = (long) (2 + Math.floor((numSpills - numSpillsFirstPass) / pSortFactor));
 			
-			return 2 * spillFileRecs * (numSpillsFirstPass + numSpillsIntermMerge + numSpillsFinalMerge);
+			long firstCost = numSpillsFirstPass * spillFileSize * 2;
+			long intermCost = (numMergePasses - 2) * spillFileSize * 2;
+			long finalCost = 2 * splitSize;
+			return firstCost + intermCost + finalCost;
 		}
 	}
 	
@@ -84,26 +84,4 @@ public class MapCostCalculator implements CostCalculator {
 			return (N - 1) % (F - 1) + 1;
 		}
 	}
-	
-	private long calcNumSpillsIntermMerge(long N, long F){
-		if(N <= F){
-			return N;
-		}
-		else{
-			long P = calcNumSpillsFirstPass(N, F);
-			return (long) (P + Math.floor((N - P) / F) * F);
-		}
-	}
-	
-	private long calcNumSpillsFinalMerge(long N, long F){
-		long P = calcNumSpillsFirstPass(N, F);
-		long S = calcNumSpillsIntermMerge(N, F);
-		if(N <= F){
-			return N;
-		}
-		else{
-			return (long) (1 + Math.floor((N - P) / F) + (N - S));
-		}
-	}
-
 }

@@ -7,10 +7,12 @@ import java.util.Set;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.crunch.CombineFn;
+import org.apache.crunch.PCollection;
 import org.apache.crunch.Pipeline;
+import org.apache.crunch.impl.mr.collect.DoTableImpl;
 import org.apache.crunch.impl.mr.collect.PCollectionImpl;
 import org.apache.crunch.impl.mr.collect.PGroupedTableImpl;
-import org.apache.crunch.impl.mr.exec.CrunchJob;
 import org.apache.hadoop.conf.Configuration;
 
 import com.google.common.collect.Lists;
@@ -22,6 +24,7 @@ public class MSCROptimizer {
 	private Set<NodePath> paths;
 	private MapReduceOracle MROracle;
 	private ClusterOracle clusterOracle;
+	private boolean opt = false;
 
 	public MSCROptimizer(Set<NodePath> paths) {
 		this.paths = paths;
@@ -35,6 +38,7 @@ public class MSCROptimizer {
 			PCollectionImpl<?> groupedTable = iter.next(); // prime this past
 															// the initial
 															// NGroupedTableImpl
+			opt = groupedTable.getPipeline().getConfiguration().getBoolean("opt.mscr", false);
 			if (MROracle == null) {
 				MROracle = getMapReduceOracle(groupedTable.getPipeline());
 			}
@@ -71,29 +75,35 @@ public class MSCROptimizer {
 				}
 			}
 		}
-		//return splitIndex;
-		//Costing calcs here.
-		splitIndex = 0;
-		for( ; splitIndex < list.size(); splitIndex++){
-			// TODO do calculating when node has only one parent now,
-			// should handle multiple parents case in the future.
-			PCollectionImpl<?> lastReduceNode = list.get(splitIndex);
-			float mapSizeSel = 1;
-			float mapRecsSel = 1;
-			int lastIndex = list.size() - 1;
-			if(splitIndex != lastIndex){
-				mapSizeSel = list.get(lastIndex).getSize() * 1.0f / lastReduceNode.getSize();
-				mapRecsSel = list.get(lastIndex).getSizeByRecord() * 1.0f / lastReduceNode.getSizeByRecord();
+		if (!opt) {
+			return splitIndex;
+		} else {
+			// Costing calcs here.
+			splitIndex = 0;
+			for (; splitIndex < list.size(); splitIndex++) {
+				// TODO do calculating when node has only one parent now,
+				// should handle multiple parents case in the future.
+				PCollectionImpl<?> lastReduceNode = list.get(splitIndex);
+				float mapSizeSel = 1;
+				float mapRecsSel = 1;
+				int lastIndex = list.size() - 1;
+				if (splitIndex != lastIndex) {
+					mapSizeSel = list.get(lastIndex).getSize() * 1.0f / lastReduceNode.getSize();
+					mapRecsSel = list.get(lastIndex).getSizeByRecord() * 1.0f / lastReduceNode.getSizeByRecord();
+					MROracle.set(MapReduceOracle.MAP_SIZE_SEL, String.valueOf(mapSizeSel));
+					MROracle.set(MapReduceOracle.MAP_RECS_SEL, String.valueOf(mapRecsSel));
+				}
+				log.info("[" + paths.toString() + " " + (splitIndex + 1) + " sel: " + mapSizeSel + "|" + mapRecsSel
+						+ "]");
+				long mapCost = getNextMapCost(lastReduceNode);
+				long reduceCost = getPreReduceCost(lastReduceNode);
+				log.info("[" + paths.toString() + " " + (splitIndex + 1) + " cost: " + (mapCost + reduceCost) + "]");
+				costMap.put(splitIndex + 1, mapCost + reduceCost);
 			}
-			log.info("[" + paths.toString() + " " + (splitIndex + 1) + " sel: " + mapSizeSel + "|" + mapRecsSel + "]");
-			long mapCost = getNextMapCost(lastReduceNode, mapSizeSel, mapRecsSel);
-			long reduceCost = getPreReduceCost(lastReduceNode);
-			log.info("[" + paths.toString() + " " + (splitIndex + 1) + " cost: " + (mapCost + reduceCost) + "]");
-			costMap.put(splitIndex + 1, mapCost + reduceCost);
+			int ret = findLowestCostIndex(costMap);
+			log.info(paths.toString() + " Split at " + ret);
+			return ret;
 		}
-		int ret = findLowestCostIndex(costMap);
-		log.info(paths.toString() + " Split at " + ret);
-		return ret;
 	}
 
 	private ClusterOracle getClusterOracle(Pipeline pipeline) {
@@ -119,19 +129,21 @@ public class MSCROptimizer {
 		return new MapReduceOracle(conf);
 	}
 
-	protected long getNextMapCost(PCollectionImpl<?> inputCollect, float mapSizeSel, float mapRecsSel) {
-		//total size of map input
+	protected long getNextMapCost(PCollectionImpl<?> inputCollect) {
+		//read cost
+		long mapReadCost = inputCollect.getSize();
+		//inner cost
 		long splitSize = inputCollect.getSize();
 		long numSplit = 1 + splitSize / (MROracle.getDFSBlockSizeMB() * MapReduceOracle.MB);
 		long inputPairWidth = (long) (splitSize / inputCollect.getSizeByRecord());
 		if (splitSize > MROracle.getDFSBlockSizeMB() * MapReduceOracle.MB) {
 			splitSize = MROracle.getDFSBlockSizeMB() * MapReduceOracle.MB;
 		}
-		CostCalculator cc = new MapCostCalculator(splitSize, inputPairWidth, mapSizeSel, mapRecsSel, MROracle);
-		return (1 + numSplit / clusterOracle.getClusterSize()) * cc.getCost();
+		CostCalculator cc = new MapCostCalculator(splitSize, inputPairWidth, MROracle);
+		return numSplit * cc.getCost() + mapReadCost;
 	}
 	
 	protected long getPreReduceCost(PCollectionImpl<?> reduceNode){
-		return reduceNode.getSizeByRecord();
+		return reduceNode.getSize();
 	}
 }
